@@ -1,0 +1,56 @@
+<resources>
+    
+<string name="app_name">Emousic</string>
+    <!-- Emotion subscription key -->
+    <!-- Please refer to https://www.projectoxford.ai/ to get your subscription key -->
+    <!-- If you have one subscription key, you can add it here to use the service -->
+    <string name="subscription_key">102d50772cad44ad91efef45340a97d7</string>
+
+    <!-- Face subscription key -->
+    <!-- Please refer to http://oxford-portal.azurewebsites.net/doc/general/subscription-key-mgmt to get your subscription key -->
+    <!-- Please note that the Emotion API and Face API have different subscription keys -->
+    <!-- You will need Face subscription key, besides the Emotion subscription keys, for the second part of the sample to work -->
+    <string name="faceSubscription_key">f8061db6501348cfb8b65141d0d9cc90</string>
+
+    <!-- Display strings -->
+    <string name="add_subscription_key_tip_title">Subscription Key is Needed</string>
+    <string name="add_subscription_key_tip">Please put your two subscription keys for Emotion API/Face API to source file \"app/res/values/strings.xml\" to enable Emotion API and Face API calls.</string>
+
+    <string name="title_activity_analyze">AnalyzeActivity</string>
+    <string name="title_activity_recognize">RecognizeActivity</string>
+    <string name="title_activity_thumbnail">ThumbnailActivity</string>
+
+    <!-- Select image activity -->
+    <string name="select_an_image">Select an Image</string>
+    <string name="take_photo">Take a Photo</string>
+    <string name="select_image_in_album">From Gallery</string>
+    
+    <string name="action_settings">Settings</string>
+
+    //from google
+
+    <!-- Activity detection strings -->
+    <string name="in_vehicle">In a vehicle</string>
+    <string name="on_bicycle">On a bicycle</string>
+    <string name="on_foot">On foot</string>
+    <string name="running">Running</string>
+    <string name="still">Still</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown">Unknown activity</string>
+    <string name="walking">Walking</string>
+    <string name="unidentifiable_activity">Unidentifiable activity: %1$d</string>
+
+    <string name="detected_activities_title">Detected Activities</string>
+
+    <string name="request_activity_updates">Request updates</string>
+    <string name="remove_activity_updates">Remove updates</string>
+
+    <string name="activity_updates_enabled">Activity updates enabled</string>
+    <string name="activity_updates_not_enabled">Failed to enable activity updates</string>
+    <string name="activity_updates_removed">Activity updates removed</string>
+    <string name="activity_updates_not_removed">Failed to remove activity updates</string>
+
+    <string name="percent">%1$d%%</string>
+
+
+</resources>

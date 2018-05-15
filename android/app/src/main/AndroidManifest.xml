@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emoActmusicplayer.btechproject.emousic" >
+    <uses-permission xmlns:tools="http://schemas.android.com/tools"
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+     <!--normal permissions-->
+
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
+    <!--danger permissions-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:supportsRtl="true">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service
+            android:name="com.emoActmusicplayer.btechproject.emousic.DetectedActivitiesIntentService"
+            android:exported="false" />
+
+        <service android:name="com.emoActmusicplayer.btechproject.emousic.MediaPlayerService" android:stopWithTask="true" />
+        <activity android:name="com.emoActmusicplayer.btechproject.emousic.MainActivityPact"></activity>
+        <activity
+            android:name="com.emoActmusicplayer.btechproject.emousic.MainActivity"
+            android:label="@string/app_name" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.emoActmusicplayer.btechproject.emousic.RecognizeActivity"
+            android:label="@string/title_activity_analyze"
+            android:parentActivityName="com.emoActmusicplayer.btechproject.emousic.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.emoActmusicplayer.btechproject.emousic.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.emoActmusicplayer.btechproject.emousic.helper.SelectImageActivity"
+            android:label="@string/select_an_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.emoActmusicplayer.btechproject.emousic.MainActivityMP"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+    </application>
+</manifest>
